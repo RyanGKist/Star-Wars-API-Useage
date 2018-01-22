@@ -13,6 +13,7 @@
 		5868B37D20166CB5000167E5 /* Star_Wars_Encyclopedia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5868B37B20166CB5000167E5 /* Star_Wars_Encyclopedia.xcdatamodeld */; };
 		5868B37F20166CB5000167E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5868B37E20166CB5000167E5 /* Assets.xcassets */; };
 		5868B38220166CB5000167E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5868B38020166CB5000167E5 /* LaunchScreen.storyboard */; };
+		5868B38A20166E46000167E5 /* MainTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868B38920166E46000167E5 /* MainTableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5868B37E20166CB5000167E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5868B38120166CB5000167E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5868B38320166CB5000167E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5868B38920166E46000167E5 /* MainTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				5868B37420166CB5000167E5 /* AppDelegate.swift */,
 				5868B37620166CB5000167E5 /* ViewController.swift */,
 				5868B37820166CB5000167E5 /* Main.storyboard */,
+				5868B38920166E46000167E5 /* MainTableVC.swift */,
 				5868B37E20166CB5000167E5 /* Assets.xcassets */,
 				5868B38020166CB5000167E5 /* LaunchScreen.storyboard */,
 				5868B38320166CB5000167E5 /* Info.plist */,
@@ -141,6 +144,7 @@
 			files = (
 				5868B37720166CB5000167E5 /* ViewController.swift in Sources */,
 				5868B37520166CB5000167E5 /* AppDelegate.swift in Sources */,
+				5868B38A20166E46000167E5 /* MainTableVC.swift in Sources */,
 				5868B37D20166CB5000167E5 /* Star_Wars_Encyclopedia.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,12 +14,7 @@ class MainTableVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let url = URL(string: "https://swapi.co/api/people/")
-        
-        let session = URLSession.shared
-        
-        let task = session.dataTask(with: url!, completionHandler: {
+        StarWarsModel.getAllPeople(completionHandler: {
             data, response, error in
             do{
                 if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
@@ -38,7 +33,6 @@ class MainTableVC: UITableViewController {
                 print(error)
             }
         })
-        task.resume()
     }
 
     override func didReceiveMemoryWarning() {

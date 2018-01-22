@@ -15,6 +15,7 @@
 		5868B38220166CB5000167E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5868B38020166CB5000167E5 /* LaunchScreen.storyboard */; };
 		5868B38A20166E46000167E5 /* MainTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868B38920166E46000167E5 /* MainTableVC.swift */; };
 		5868B38C20169708000167E5 /* FilmsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868B38B20169708000167E5 /* FilmsTableVC.swift */; };
+		5868B38E2016AE56000167E5 /* StarWarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868B38D2016AE56000167E5 /* StarWarsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5868B38320166CB5000167E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5868B38920166E46000167E5 /* MainTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableVC.swift; sourceTree = "<group>"; };
 		5868B38B20169708000167E5 /* FilmsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsTableVC.swift; sourceTree = "<group>"; };
+		5868B38D2016AE56000167E5 /* StarWarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				5868B37820166CB5000167E5 /* Main.storyboard */,
 				5868B38920166E46000167E5 /* MainTableVC.swift */,
 				5868B38B20169708000167E5 /* FilmsTableVC.swift */,
+				5868B38D2016AE56000167E5 /* StarWarsModel.swift */,
 				5868B37E20166CB5000167E5 /* Assets.xcassets */,
 				5868B38020166CB5000167E5 /* LaunchScreen.storyboard */,
 				5868B38320166CB5000167E5 /* Info.plist */,
@@ -149,6 +152,7 @@
 				5868B37520166CB5000167E5 /* AppDelegate.swift in Sources */,
 				5868B38A20166E46000167E5 /* MainTableVC.swift in Sources */,
 				5868B38C20169708000167E5 /* FilmsTableVC.swift in Sources */,
+				5868B38E2016AE56000167E5 /* StarWarsModel.swift in Sources */,
 				5868B37D20166CB5000167E5 /* Star_Wars_Encyclopedia.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

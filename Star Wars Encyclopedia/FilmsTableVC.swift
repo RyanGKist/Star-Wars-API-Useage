@@ -14,11 +14,8 @@ class FilmsTableVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL(string: "https://swapi.co/api/films/")
         
-        let session = URLSession.shared
-        
-        let task = session.dataTask(with: url!, completionHandler: {
+        StarWarsModel.getAllFilms(completionHandler: {
             data, response, error in
             do{
                 if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
@@ -37,7 +34,6 @@ class FilmsTableVC: UITableViewController {
                 print(error)
             }
         })
-        task.resume()
     }
 
 

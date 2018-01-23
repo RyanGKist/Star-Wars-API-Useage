@@ -11,6 +11,7 @@ import UIKit
 class FilmsTableVC: UITableViewController {
     
     var films = [String]()
+    var holder: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +58,17 @@ class FilmsTableVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell")
         cell?.textLabel?.text = films[indexPath.row]
         return cell!
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        holder = indexPath.row
+        performSegue(withIdentifier: "showFilm", sender: indexPath)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showFilm"{
+            let destination = segue.destination as! ViewController
+            destination.recievingFilm = films[holder!]
+            print(films[holder!])
+        }
     }
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)

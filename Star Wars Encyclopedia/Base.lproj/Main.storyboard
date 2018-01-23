@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,6 +34,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Star Wars API" id="THY-UU-BeX">
+                        <barButtonItem key="leftBarButtonItem" title="Details" id="158-OY-ZRi">
+                            <connections>
+                                <segue destination="V4Z-pg-dB3" kind="presentation" identifier="showDetail" id="l1n-Ct-5ir"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="oDe-wm-Xif">
                             <connections>
                                 <segue destination="S3x-gL-56Z" kind="presentation" id="hA7-Ba-4AV"/>
@@ -68,6 +74,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="ITF-5b-iKz">
+                        <barButtonItem key="leftBarButtonItem" tag="1" title="Details" id="5Uc-hC-SIn">
+                            <connections>
+                                <segue destination="V4Z-pg-dB3" kind="presentation" identifier="showFilm" id="dPO-x3-Ja8"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="C7q-hW-AdB">
                             <connections>
                                 <action selector="doneButtonPressed:" destination="Cpv-E3-2rC" id="VxN-UI-aIw"/>
@@ -115,5 +126,43 @@
             </objects>
             <point key="canvasLocation" x="1248" y="46.776611694152926"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="fsJ-CY-SWI">
+            <objects>
+                <viewController id="V4Z-pg-dB3" customClass="ViewController" customModule="Star_Wars_Encyclopedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xeq-9I-UeB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30y-bZ-72g">
+                                <rect key="frame" x="164" y="570" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go Back"/>
+                                <connections>
+                                    <action selector="goBackButtonPressed:" destination="V4Z-pg-dB3" eventType="touchDown" id="BKH-Zp-A6o"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxD-PY-nIq">
+                                <rect key="frame" x="86" y="106" width="202" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Qr4-fJ-hV9"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelOutlet" destination="kxD-PY-nIq" id="q4N-kw-oFs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vBh-7v-yQF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976.79999999999995" y="827.13643178410803"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dPO-x3-Ja8"/>
+    </inferredMetricsTieBreakers>
 </document>

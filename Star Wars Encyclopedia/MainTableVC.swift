@@ -11,6 +11,7 @@ import UIKit
 class MainTableVC: UITableViewController {
     
     var people = [String]()
+    var holder : Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,18 @@ class MainTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.textLabel?.text = people[indexPath.row]
+        cell.tag = 1
         return cell
     }
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        holder = indexPath.row
+        performSegue(withIdentifier: "showDetail", sender: indexPath)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail"{
+            let destination = segue.destination as! ViewController
+            destination.recievingName = people[holder!]
+            print(people[holder!])
+        }
+    }
 }
